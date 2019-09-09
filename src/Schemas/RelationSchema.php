@@ -32,7 +32,7 @@ class RelationSchema extends Schema
                 ->setRelations(app('amethyst')->getMorphRelationable('relation', 'target'))
                 ->setRequired(true),
             Attributes\CreatedAtAttribute::make(),
-            Attributes\UpdatedAtAttribute::make()
+            Attributes\UpdatedAtAttribute::make(),
         ];
     }
 }

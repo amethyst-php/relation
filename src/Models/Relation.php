@@ -2,10 +2,10 @@
 
 namespace Amethyst\Models;
 
-use Illuminate\Database\Eloquent\Model;
 use Amethyst\Common\ConfigurableModel;
-use Railken\Lem\Contracts\EntityContract;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\MorphTo;
+use Railken\Lem\Contracts\EntityContract;
 
 class Relation extends Model implements EntityContract
 {

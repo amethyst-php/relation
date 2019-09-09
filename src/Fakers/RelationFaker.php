@@ -5,7 +5,6 @@ namespace Amethyst\Fakers;
 use Faker\Factory;
 use Railken\Bag;
 use Railken\Lem\Faker;
-use Illuminate\Database\Eloquent\Relations\MorphTo;
 
 class RelationFaker extends Faker
 {
