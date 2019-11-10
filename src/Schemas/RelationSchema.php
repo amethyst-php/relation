@@ -15,7 +15,7 @@ class RelationSchema extends Schema
     public function getAttributes()
     {
         return [
-            Attributes\UuidAttribute::make('id'),
+            Attributes\IdAttribute::make('id'),
             Attributes\TextAttribute::make('key'),
             Attributes\EnumAttribute::make('source_type', app('amethyst')->getMorphListable('relation', 'source'))
                 ->setRequired(true),

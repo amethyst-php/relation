@@ -6,16 +6,12 @@ use Amethyst\Common\ConfigurableModel;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\MorphTo;
 use Railken\Lem\Contracts\EntityContract;
+use Illuminate\Database\Eloquent\Relations\MorphPivot;
+use Illuminate\Support\Str;
 
-class Relation extends Model implements EntityContract
+class Relation extends MorphPivot implements EntityContract
 {
     use ConfigurableModel;
-
-    public $incrementing = false;
-
-    protected $casts = ['id' => 'string'];
-
-    protected $keyType = 'string';
 
     /**
      * Create a new Eloquent model instance.
@@ -26,6 +22,20 @@ class Relation extends Model implements EntityContract
     {
         $this->ini('amethyst.relation.data.relation');
         parent::__construct($attributes);
+    }
+
+    /**
+     * Delete the pivot model record from the database.
+     *
+     * @return int
+     */
+    public function delete()
+    {
+        $query = $this->getDeleteQuery();
+        if ($this->morphClass) {
+            $query->where($this->morphType, $this->morphClass);
+        }
+        return $query->delete();
     }
 
     /**
@@ -42,5 +52,15 @@ class Relation extends Model implements EntityContract
     public function target(): MorphTo
     {
         return $this->morphTo();
+    }
+
+    /**
+     * Get the query builder for a delete operation on the pivot.
+     *
+     * @return \Illuminate\Database\Eloquent\Builder
+     */
+    protected function getDeleteQuery()
+    {
+        return $this->id ? $this->newQuery()->where('id', $this->id) : parent::getDeleteQuery();
     }
 }
