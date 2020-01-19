@@ -1,6 +1,6 @@
 # amethyst-relation
 
-[![Build Status](https://travis-ci.org/amethyst-php/relation.svg?branch=master)](https://travis-ci.org/amethyst-php/relation)
+[![Action Status](https://github.com/amethyst-php/relation/workflows/test/badge.svg)](https://github.com/amethyst-php/relation/actions)
 
 [Amethyst](https://github.com/amethyst-php/amethyst) package.
 
