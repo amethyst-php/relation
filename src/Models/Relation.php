@@ -4,10 +4,9 @@ namespace Amethyst\Models;
 
 use Amethyst\Core\ConfigurableModel;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\MorphPivot;
 use Illuminate\Database\Eloquent\Relations\MorphTo;
 use Railken\Lem\Contracts\EntityContract;
-use Illuminate\Database\Eloquent\Relations\MorphPivot;
-use Illuminate\Support\Str;
 
 class Relation extends MorphPivot implements EntityContract
 {
@@ -35,6 +34,7 @@ class Relation extends MorphPivot implements EntityContract
         if ($this->morphClass) {
             $query->where($this->morphType, $this->morphClass);
         }
+
         return $query->delete();
     }
 
