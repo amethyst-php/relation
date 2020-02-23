@@ -17,14 +17,14 @@ class RelationSchema extends Schema
         return [
             Attributes\IdAttribute::make('id'),
             Attributes\TextAttribute::make('key'),
-            Attributes\EnumAttribute::make('source_type', app('amethyst')->getDataNames())
+            \Amethyst\Core\Attributes\DataNameAttribute::make('source_type')
                 ->setRequired(true),
             Attributes\MorphToAttribute::make('source_id')
                 ->setRelationKey('source_type')
                 ->setRelationName('source')
                 ->setRelations(app('amethyst')->getDataManagers())
                 ->setRequired(true),
-            Attributes\EnumAttribute::make('target_type', app('amethyst')->getDataNames())
+            \Amethyst\Core\Attributes\DataNameAttribute::make('target_type')
                 ->setRequired(true),
             Attributes\MorphToAttribute::make('target_id')
                 ->setRelationKey('target_type')
