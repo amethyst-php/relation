@@ -1,8 +1,7 @@
 # amethyst-relation
 
-[![Action Status](https://github.com/amethyst-php/relation/workflows/test/badge.svg)](https://github.com/amethyst-php/relation/actions)
-
-[Amethyst](https://github.com/amethyst-php/amethyst) package.
+[![Action Status](https://github.com/amethyst-php/relation/workflows/Test/badge.svg)](https://github.com/amethyst-php/relation/actions)
+[![Amethyst](https://img.shields.io/badge/Package-Amethyst-7e57c2)](https://github.com/amethyst-php/amethyst)
 
 # Requirements
 
