@@ -6,7 +6,7 @@
 
 # Requirements
 
-PHP 7.1 and later.
+PHP 8.2 and later.
 
 ## Installation
 

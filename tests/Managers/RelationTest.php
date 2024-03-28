@@ -4,10 +4,10 @@ namespace Amethyst\Tests\Managers;
 
 use Amethyst\Fakers\RelationFaker;
 use Amethyst\Managers\RelationManager;
-use Amethyst\Tests\BaseTest;
+use Amethyst\Tests\Base;
 use Railken\Lem\Support\Testing\TestableBaseTrait;
 
-class RelationTest extends BaseTest
+class RelationTest extends Base
 {
     use TestableBaseTrait;
 

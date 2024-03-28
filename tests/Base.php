@@ -2,7 +2,7 @@
 
 namespace Amethyst\Tests;
 
-abstract class BaseTest extends \Orchestra\Testbench\TestCase
+abstract class Base extends \Orchestra\Testbench\TestCase
 {
     /**
      * Setup the test environment.
@@ -18,7 +18,7 @@ abstract class BaseTest extends \Orchestra\Testbench\TestCase
     {
         return [
             \Amethyst\Providers\RelationServiceProvider::class,
-            \Amethyst\Providers\FooServiceProvider::class,
+            \Amethyst\Providers\FooServiceProvider::class
         ];
     }
 }
