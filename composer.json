@@ -5,12 +5,12 @@
     "license": "MIT",
     "require": {
         "php": ">=8.2",
-        "amethyst/core": "0.3.*",
-        "amethyst/foo": "0.3.*"
+        "amethyst/core": "0.3.*"
     },
     "require-dev": {
         "orchestra/testbench": "*",
-        "friendsofphp/php-cs-fixer": "^3.52"
+        "friendsofphp/php-cs-fixer": "^3.52",
+        "amethyst/foo": "0.3.*"
     },
     "autoload": {
         "psr-4" : {
